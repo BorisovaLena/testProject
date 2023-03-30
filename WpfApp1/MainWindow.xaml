@@ -1,0 +1,25 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <Canvas Name="cnv" Width="500" Height="150" Background="AliceBlue">
+
+                <Ellipse Name="el" Width="200" Height="100"  Stroke="Black" Canvas.Left="178" Canvas.Top="10"/>
+                <Ellipse Name="el2" Width="200" Height="100"  Stroke="Black" Canvas.Left="290" Canvas.Top="10"/>
+
+            </Canvas>
+            <StackPanel Name="sp">
+                
+            </StackPanel>
+        </StackPanel>
+        
+       
+
+    </Grid>
+</Window>
