@@ -9,16 +9,117 @@
     <Grid>
         <StackPanel>
             <Canvas Name="cnv" Width="500" Height="150" Background="AliceBlue">
+                <Ellipse x:Name="el4" MouseDown="el4_MouseDown" Width="200" Height="100" Fill="White" Canvas.Left="164" Canvas.Top="10"/>
+                <Ellipse Name="el5" MouseDown="el5_MouseDown" Width="200" Height="100" Fill="White" Canvas.Left="290" Canvas.Top="10"/>
+                <Ellipse Name="el3" MouseDown="el3_MouseDown" Width="75" Height="26" Fill="White" Canvas.Left="289" Canvas.Top="47" RenderTransformOrigin="0.5,0.5">
+                    <Ellipse.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-90"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Ellipse.RenderTransform>
+                </Ellipse>
+                <Ellipse x:Name="el3_Copy" MouseDown="el3_MouseDown" Width="73" Height="58" Fill="White" Canvas.Left="291" Canvas.Top="30" RenderTransformOrigin="0.5,0.5">
+                    <Ellipse.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleX="-2.668"/>
+                            <RotateTransform/>
+                            <TranslateTransform X="-0.655" Y="0.728"/>
+                        </TransformGroup>
+                    </Ellipse.RenderTransform>
+                </Ellipse>
+                <Ellipse x:Name="el3_Copy1" MouseDown="el3_MouseDown" Width="35" Height="6" Fill="White" Canvas.Left="296" Canvas.Top="83" RenderTransformOrigin="0.5,0.5">
+                    <Ellipse.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleX="-2.668"/>
+                            <RotateTransform Angle="31.393"/>
+                            <TranslateTransform X="-0.655" Y="0.728"/>
+                        </TransformGroup>
+                    </Ellipse.RenderTransform>
+                </Ellipse>
+                <Ellipse x:Name="el3_Copy2" MouseDown="el3_MouseDown" Width="35" Height="6" Fill="White" Canvas.Left="324" Canvas.Top="83" RenderTransformOrigin="0.5,0.5">
+                    <Ellipse.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleX="-2.668"/>
+                            <RotateTransform Angle="147.298"/>
+                            <TranslateTransform X="-0.655" Y="0.728"/>
+                        </TransformGroup>
+                    </Ellipse.RenderTransform>
+                </Ellipse>
+                <Ellipse x:Name="el3_Copy3" MouseDown="el3_MouseDown" Width="17" Height="5" Fill="White" Canvas.Left="349" Canvas.Top="70" RenderTransformOrigin="0.5,0.5">
+                    <Ellipse.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="-1"/>
+                            <SkewTransform AngleX="-2.668"/>
+                            <RotateTransform Angle="125.088"/>
+                            <TranslateTransform X="-0.655" Y="0.728"/>
+                        </TransformGroup>
+                    </Ellipse.RenderTransform>
+                </Ellipse>
+                <Ellipse x:Name="el3_Copy4" MouseDown="el3_MouseDown" Width="44" Height="14" Fill="White" Canvas.Left="318" Canvas.Top="28" RenderTransformOrigin="0.5,0.5">
+                    <Ellipse.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleX="-2.668"/>
+                            <RotateTransform Angle="32.101"/>
+                            <TranslateTransform X="-0.655" Y="0.728"/>
+                        </TransformGroup>
+                    </Ellipse.RenderTransform>
+                </Ellipse>
+                <Ellipse x:Name="el3_Copy5" MouseDown="el3_MouseDown" Width="44" Height="14" Fill="White" Canvas.Left="291" Canvas.Top="29" RenderTransformOrigin="0.5,0.5">
+                    <Ellipse.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleX="-2.668"/>
+                            <RotateTransform Angle="-33.79"/>
+                            <TranslateTransform X="-0.655" Y="0.728"/>
+                        </TransformGroup>
+                    </Ellipse.RenderTransform>
+                </Ellipse>
+                <Ellipse x:Name="el3_Copy6" MouseDown="el3_MouseDown" Width="22" Height="12" Fill="White" Canvas.Left="286" Canvas.Top="47" RenderTransformOrigin="0.5,0.5">
+                    <Ellipse.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleX="-2.668"/>
+                            <RotateTransform Angle="-72.659"/>
+                            <TranslateTransform X="-0.655" Y="0.728"/>
+                        </TransformGroup>
+                    </Ellipse.RenderTransform>
+                </Ellipse>
+                <Ellipse x:Name="el3_Copy7" MouseDown="el3_MouseDown" Width="9" Height="4" Fill="White" Canvas.Left="324" Canvas.Top="21" RenderTransformOrigin="0.5,0.5">
+                    <Ellipse.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleX="-2.668"/>
+                            <RotateTransform Angle="8.057"/>
+                            <TranslateTransform X="-0.655" Y="0.728"/>
+                        </TransformGroup>
+                    </Ellipse.RenderTransform>
+                </Ellipse>
+                <Ellipse x:Name="el3_Copy8" MouseDown="el3_MouseDown" Width="9" Height="4" Fill="White" Canvas.Left="326" Canvas.Top="22" RenderTransformOrigin="0.5,0.5">
+                    <Ellipse.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleX="-2.668"/>
+                            <RotateTransform Angle="8.057"/>
+                            <TranslateTransform X="-0.655" Y="0.728"/>
+                        </TransformGroup>
+                    </Ellipse.RenderTransform>
+                </Ellipse>
 
-                <Ellipse Name="el" Width="200" Height="100"  Stroke="Black" Canvas.Left="178" Canvas.Top="10"/>
-                <Ellipse Name="el2" Width="200" Height="100"  Stroke="Black" Canvas.Left="290" Canvas.Top="10"/>
-
+                <Ellipse x:Name="el1" Width="200" Height="100" Stroke="Black" Canvas.Left="164" Canvas.Top="10"/>
+                <Ellipse Name="el2" Width="200" Height="100" Stroke="Black" Canvas.Left="290" Canvas.Top="10"/>
             </Canvas>
             <StackPanel Name="sp">
-                
+                <TextBlock Name="yslov"/>
+                <Button Name="prov" Content="Проверка" Click="prov_Click"/>
             </StackPanel>
         </StackPanel>
-        
        
 
     </Grid>

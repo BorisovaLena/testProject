@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace WpfApp1
 {
@@ -11,12 +12,14 @@ namespace WpfApp1
     {
         Random random = new Random();
         int[] masEl = { 0, 0, 0, 0, 0 };
+        int rez = -1;
         public MainWindow()
         {
             InitializeComponent();
             randEl();
             elInCanv();
             generationVira();
+            yslovie();
         }
 
         public void randEl() // генерация элементов
@@ -82,6 +85,133 @@ namespace WpfApp1
                 sp.Children.Add(tb2);
             }
             dopmas = new int[] { -1, -1, -1, -1, -1 };
+        }
+
+        bool b = false;
+        private void el3_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            if(b==false)
+            {
+                el3.Fill = Brushes.Green;
+                el3_Copy.Fill = Brushes.Green;
+                el3_Copy1.Fill = Brushes.Green;
+                el3_Copy2.Fill = Brushes.Green;
+                el3_Copy3.Fill = Brushes.Green;
+                el3_Copy4.Fill = Brushes.Green;
+                el3_Copy5.Fill = Brushes.Green;
+                el3_Copy6.Fill = Brushes.Green;
+                el3_Copy7.Fill = Brushes.Green;
+                el3_Copy8.Fill = Brushes.Green;
+                b = true;
+            }
+            else
+            {
+                el3.Fill = Brushes.White;
+                el3_Copy.Fill = Brushes.White;
+                el3_Copy1.Fill = Brushes.White;
+                el3_Copy2.Fill = Brushes.White;
+                el3_Copy3.Fill = Brushes.White;
+                el3_Copy4.Fill = Brushes.White;
+                el3_Copy5.Fill = Brushes.White;
+                el3_Copy6.Fill = Brushes.White;
+                el3_Copy7.Fill = Brushes.White;
+                el3_Copy8.Fill = Brushes.White;
+                b = false;
+            }
+            
+        }
+
+        bool b1 = false;
+        private void el4_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            if(b1==false)
+            {
+                el4.Fill = Brushes.Green;
+                b1 = true;
+            }
+            else
+            {
+                el4.Fill = Brushes.White;
+                b1 = false;
+            }
+        }
+
+        bool b2 = false;
+        private void el5_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            if (b2 == false)
+            {
+                el5.Fill = Brushes.Green;
+                b2 = true;
+            }
+            else
+            {
+                el5.Fill = Brushes.White;
+                b2 = false;
+            }
+        }
+
+        public void yslovie() // генерация условия
+        {
+            string[] masZnak = { "A ∪ B", "A ∩ B","множество A", "множество B" };
+            rez = random.Next(4);
+            yslov.Text = "Закрасте "+masZnak[rez] + ".";
+        }
+
+        public void proverka() // проверка
+        {
+            switch(rez)
+            {
+                case 0:
+                    if(el5.Fill==Brushes.Green && el4.Fill == Brushes.Green && el3.Fill == Brushes.Green)
+                    {
+                        MessageBox.Show("Молодец");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Лох");
+                    }
+                    break;
+                case 1:
+                    if (el3.Fill == Brushes.Green && el5.Fill == Brushes.White && el4.Fill == Brushes.White)
+                    {
+                        MessageBox.Show("Молодец");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Лох");
+                    }
+                    break;
+                case 2:
+                    if (el4.Fill == Brushes.Green && el3.Fill == Brushes.Green && el5.Fill == Brushes.White)
+                    {
+                        MessageBox.Show("Молодец");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Лох");
+                    }
+                    break;
+                case 3:
+                    if (el5.Fill == Brushes.Green && el3.Fill == Brushes.Green && el4.Fill == Brushes.White)
+                    {
+                        MessageBox.Show("Молодец");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Лох");
+                    }
+                    break;
+            }
+        }
+
+        private void prov_Click(object sender, RoutedEventArgs e)
+        {
+            proverka();
+            randEl();
+            elInCanv();
+            generationVira();
+            yslovie();
         }
     }
 }
